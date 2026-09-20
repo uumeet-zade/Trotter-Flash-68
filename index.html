@@ -1,257 +1,141 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trottier / Fayyad-Bethune '64</title>
-    <meta name="description" content="The official 2064 presidential campaign website for Mandy Trottier and Safiya Fayyad-Bethune. The return is inevitable.">
-    <link rel="stylesheet" href="index.css?v=6.0">
+    <title>Trottier-Flash '68 | Caprica Presidential Campaign</title>
+    <meta name="description" content="The official 2068 presidential campaign website for Mandy Trottier and Adriana Flash. Effective, stable leadership for Caprica.">
+    <link rel="stylesheet" href="index.css?v=68.1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-<body data-crt="true">
-    <div class="scanlines"></div>
-    <div class="crt-overlay"></div>
-
+<body>
     <header class="site-header">
         <div class="logo-container">
-            <img src="ALPLogo.png" alt="Alternative Labour Party Logo" class="party-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%" class="campaign-wordmark" aria-label="Trottier Bethune '64 Logo">
-                <defs>
-                    <style>
-                        .brutal-title { font-family: 'Anton', sans-serif; font-size: 210px; text-transform: uppercase; letter-spacing: -2px; fill: var(--text-light); }
-                        .brutal-subtitle { font-family: 'Anton', sans-serif; font-size: 210px; text-transform: uppercase; letter-spacing: -2px; fill: var(--obsidian); }
-                        .brutal-year { font-family: 'Space Mono', monospace; font-size: 220px; font-weight: bold; letter-spacing: -12px; fill: var(--obsidian); }
-                        .logo-crimson { fill: var(--crimson); }
-                        .logo-bg { fill: var(--text-light); }
-                    </style>
-                </defs>
-
-                <!-- Massive red block on the left -->
-                <rect x="0" y="0" width="350" height="400" class="logo-crimson" />
-                
-                <!-- White/Black background block for the subtitle to create stark contrast -->
-                <rect x="350" y="200" width="850" height="200" class="logo-bg" />
-
-                <!-- 64 inside the red block -->
-                <text x="175" y="280" class="brutal-year" text-anchor="middle">64</text>
-
-                <!-- TROTTIER in the top half (Dark background of the page shows through, so text needs to be light) -->
-                <text x="380" y="190" class="brutal-title" text-anchor="start">TROTTIER</text>
-
-                <!-- BETHUNE in the bottom half (Light background block, so text needs to be dark) -->
-                <text x="380" y="390" class="brutal-subtitle" text-anchor="start">BETHUNE</text>
-
-                <!-- Vertical harsh separator line -->
-                <rect x="350" y="0" width="16" height="400" fill="var(--text-light)" />
-            </svg>
+            <div class="party-logos">
+                <img src="logos/Altenative_ALP_Logo.png.png" alt="Alternative Labour Party Logo" class="party-logo">
+                <img src="logos/DGClogomark.png" alt="Democratic Greens Logo" class="party-logo">
+            </div>
+            <h1 class="campaign-title">Trottier-Flash '68</h1>
         </div>
         <nav class="main-nav">
-            <a href="#manifesto">THE MANIFESTO</a>
-            <a href="#ticket">THE TICKET</a>
-            <a href="#mobilize">ACCOUNTABILITY</a>
+            <a href="#platform">Platform</a>
+            <a href="#endorsements">Endorsements</a>
+            <a href="#join">Volunteer</a>
         </nav>
-        <div class="header-right">
-            <button id="themeToggle" class="btn-secondary">MODE: CONCRETE</button>
-            <button id="analogToggle" class="btn-secondary">ANALOG: ON</button>
-            <div class="countdown pulse">
-                ELECTION MINUS 143 DAYS
-            </div>
-        </div>
     </header>
 
     <main class="hero">
-        <div class="hero-content">
-            <h1 class="ray-text">
-                THEY TOOK YOUR FUTURE.<br>
-                WE ARE TAKING IT BACK.
-            </h1>
-            <p class="manifesto-intro">
-                The 2060 administration failed the people. It is time to restore Caprica. Mandy Trottier is ready to finish what she started.
-            </p>
-            <button class="btn-primary">JOIN THE MOVEMENT <span style="font-family:var(--font-mono)">→</span></button>
+        <div class="hero-half hero-alp">
+            <h2>Candidate for President</h2>
+            <h1>Mandy Trottier</h1>
+            <p>Former President and Vice-President. A steadfast commitment to democratic principles and economic justice.</p>
+            <button class="btn-outline" onclick="document.getElementById('platform').scrollIntoView({behavior: 'smooth'})">Read Our Vision</button>
         </div>
-        <div class="hero-visual">
-            <div class="portrait-container">
-                <img src="mandyfuckingtrottier-nobg.png" alt="Mandy Trottier Candidate Portrait" class="candidate-image">
-                <div class="sunglass-ray"></div>
-                <div class="nametag">M. TROTTIER</div>
-            </div>
+        <div class="hero-half hero-dgc">
+            <h2>Candidate for Vice President</h2>
+            <h1>Adriana Flash</h1>
+            <p>19th Prime Minister of Caprica. Leading the charge on environmental reform and equitable progress.</p>
+            <button class="btn-outline" onclick="document.getElementById('join').scrollIntoView({behavior: 'smooth'})">Join the Movement</button>
         </div>
     </main>
 
-    <section id="manifesto" class="section-manifesto">
-        <div class="manifesto-content">
-            <h2 class="section-title">THE DOCTRINE</h2>
-            <div class="doctrine-grid">
-                <div class="doctrine-item">
-                    <div class="doctrine-header">01. THE BETRAYAL OF TRUST</div>
-                    <div class="doctrine-body">
-                        The political establishment has fundamentally betrayed you. The right demands your vote every four years with promises of liberty and lower taxes. Instead, Patrick attempts to pass unconstitutional amendments to strip power from the states and centralize it federally. They spend their time slandering me as an extremist for pursuing diplomacy, while they actively dismantle our constitutional protections. Ronan raises your taxes without improving your welfare, underfunding critical crises while padding his sovereign wealth fund. Even bonafide conservatives are realizing that another term for Ronan guarantees higher taxes and broken promises. We offer a genuine alternative.
-                    </div>
-                </div>
-                <div class="doctrine-item">
-                    <div class="doctrine-header">02. RESTORING PUBLIC SAFETY</div>
-                    <div class="doctrine-body">
-                        We are ending this era of manufactured instability. Caprica once possessed a unified, highly competent intelligence apparatus under Lili Bethune. The current administration dismantled those vital security frameworks, dividing COIN into ineffective fragments and marketing the resulting chaos as freedom. This approach has actively compromised your safety and your peace of mind. By underfunding law enforcement and treating security as an afterthought, they have allowed crime to surge unchecked. We must definitively restore security and order to our communities.
-                    </div>
-                </div>
-                <div class="doctrine-item">
-                    <div class="doctrine-header">03. BREAKING THE CYCLE</div>
-                    <div class="doctrine-body">
-                        My political career began in the 2030s during the Edelstein-Powell administration. We stood on opposite sides, yet we were ultimately fighting the same structural decay. Caprica has been trapped in an endless political pendulum since that era. We endure a constant cycle of temporary progress followed by aggressive corporate backlash. This relentless back-and-forth squanders our national advantages while global competitors move decisively forward. We must break this paralyzing cycle of gridlock and retribution.
-                    </div>
-                </div>
-                <div class="doctrine-item">
-                    <div class="doctrine-header">04. THE 2060s MANDATE</div>
-                    <div class="doctrine-body">
-                        By electing me alongside a supportive Prime Minister, we will finally bring Caprica out of the past and into the 2060s. We are ending political stagnation. We will pass the comprehensive reforms our nation desperately needs, overcoming any partisan obstructionism from the Bureaucratic Elite. We reject a system where unelected bureaucrats and unchecked corporate capital dictate that Capricans cannot collectively own and manage our own resources. We will reclaim our sovereignty and build a stable, prosperous future.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="ticket" class="section-ticket">
-        <div class="ticket-container">
-            <div class="dossier">
-            <div class="dossier-header">PRESIDENTIAL CANDIDATE</div>
-            <div class="dossier-name">MANDY TROTTIER</div>
-            <div class="dossier-body">
-                <p>Former President.</p>
-                <p>This campaign demands total accountability and fulfills the core mandate of the Alternative Labour Party.</p>
-            </div>
-        </div>
-        <div class="dossier">
-            <div class="dossier-header">VICE PRESIDENTIAL CANDIDATE</div>
-            <div class="dossier-name">SAFIYA FAYYAD-BETHUNE</div>
-            <div class="dossier-body">
-                <p>The strategist. The operator.</p>
-                <p>Fayyad-Bethune brings the necessary operational discipline to ensure our policies are implemented without hesitation or compromise.</p>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section id="broadcast" class="section-broadcast">
-        <div class="broadcast-content">
-            <h2 class="section-title">BROADCAST</h2>
-            <div class="media-grid">
-                <div class="media-item">
-                    <img src="posterfinal,.png" alt="Official Campaign Poster" class="broadcast-poster">
-                </div>
-                <div class="media-item">
-                    <div class="video-wrapper">
-                        <iframe 
-                            src="https://www.youtube-nocookie.com/embed/b2wWrvyS3ps" 
-                            title="Campaign Broadcast" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="mobilize" class="section-mobilize">
-        <div class="mobilize-container">
-            <h2 class="section-title">MOBILIZE</h2>
-            <p class="mobilize-desc">Join the campaign. We need your unwavering dedication.</p>
-            <form id="mobilize-form" class="mobilize-form">
-                <div class="input-group">
-                    <input type="text" id="name" placeholder="FULL NAME" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" id="email" placeholder="EMAIL ADDRESS" required>
-                </div>
-                <div class="input-group">
-                    <input type="text" id="location" placeholder="SECTOR / CITY" required>
-                </div>
-                <button type="submit" class="btn-primary submit-btn">PLEDGE SUPPORT <span style="font-family:var(--font-mono)">→</span></button>
-            </form>
-            <div id="form-success" class="form-success" style="display: none;">
-                <div class="success-message">INFORMATION RECEIVED.</div>
-                <div class="success-sub">WE WILL BE IN TOUCH.</div>
-            </div>
-        </div>
-    </section>
-
     <div class="ticker-wrap">
-        <div class="ticker">
-            <span class="ticker-item">THE RETURN IS INEVITABLE</span>
-            <span class="ticker-item">RESTORE ORDER</span>
-            <span class="ticker-item">NO COMPROMISE</span>
-            <span class="ticker-item">THE 2060 EXPERIMENT FAILED</span>
-            <span class="ticker-item">THE RETURN IS INEVITABLE</span>
-            <span class="ticker-item">RESTORE ORDER</span>
-            <span class="ticker-item">NO COMPROMISE</span>
-            <span class="ticker-item">THE 2060 EXPERIMENT FAILED</span>
+        <div class="ticker-content">
+            <span class="ticker-item">Vote Trottier-Flash '68</span>
+            <span class="ticker-item">Leadership for a Modern Caprica</span>
+            <span class="ticker-item">A Unified Front</span>
+            <span class="ticker-item">Restoring Stability</span>
+            <span class="ticker-item">Vote Trottier-Flash '68</span>
+            <span class="ticker-item">Leadership for a Modern Caprica</span>
+            <span class="ticker-item">A Unified Front</span>
+            <span class="ticker-item">Restoring Stability</span>
         </div>
     </div>
 
+    <div class="dual-portrait-block">
+        <div class="portrait-half portrait-alp">
+            <div class="portrait-card">
+                <img src="Portraits/mandy.png" alt="Mandy Trottier Portrait">
+                <div class="portrait-info">
+                    <h4>Mandy Trottier</h4>
+                    <span>Presidential Candidate (ALP)</span>
+                </div>
+            </div>
+        </div>
+        <div class="portrait-half portrait-dgc">
+            <div class="portrait-card">
+                <img src="Portraits/adriana.png" alt="Adriana Flash Portrait">
+                <div class="portrait-info">
+                    <h4>Adriana Flash</h4>
+                    <span>Vice Presidential Candidate (DGC)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="platform" class="section-platform">
+        <h2 class="section-title">Our Platform</h2>
+        <div class="platform-grid">
+            <div class="platform-block">
+                <h3>Restoring Economic Stability</h3>
+                <p>We will implement sound fiscal policies that foster growth and ensure prosperity for all Capricans. We are committed to rebuilding the middle class through equitable taxation and massive investments in green technology and infrastructure.</p>
+            </div>
+            <div class="platform-block">
+                <h3>Unified Security and Diplomacy</h3>
+                <p>Caprica must lead on the global stage with a unified voice. We will rebuild our international alliances and ensure our intelligence and security apparatus operates with both efficiency and profound respect for civil liberties.</p>
+            </div>
+            <div class="platform-block">
+                <h3>Environmental Stewardship</h3>
+                <p>Climate action is an absolute economic imperative. Under the leadership of Adriana Flash, we will transition Caprica to a fully sustainable energy grid, creating millions of jobs and securing our environment for future generations.</p>
+            </div>
+            <div class="platform-block">
+                <h3>Healthcare as a Right</h3>
+                <p>Every Caprican deserves access to world-class medical care. We will expand public health infrastructure, reduce prescription costs, and ensure that preventative care is universally available across all sectors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="endorsements" class="section-endorsements">
+        <h2 class="section-title">Supported By</h2>
+        <div class="endorsement-logos">
+            <div class="endorsing-party">
+                <img src="logos/Altenative_ALP_Logo.png.png" alt="Alternative Labour Party">
+                <span>Alternative Labour Party</span>
+            </div>
+            <div class="endorsing-party">
+                <img src="logos/DGClogomark.png" alt="Democratic Greens">
+                <span>Democratic Greens</span>
+            </div>
+            <div class="endorsing-party">
+                <img src="logos/SDAsmall.svg" alt="Social Democratic Alliance">
+                <span>Social Democratic Alliance</span>
+            </div>
+            <div class="endorsing-party">
+                <img src="logos/Moderatereform.png" alt="Moderate Reform">
+                <span>Moderate Reform</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="section-join">
+        <div class="join-info">
+            <h2 class="section-title">Join the Campaign</h2>
+            <p style="font-size: 1.25rem; max-width: 400px;">We need your energy and dedication to win in '68. Sign up to volunteer and be a part of the movement.</p>
+        </div>
+        <div class="join-form-container">
+            <form class="join-form" onsubmit="event.preventDefault(); this.innerHTML='<h3 style=\'color:white;\'>Thank you for joining us!</h3>';">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Sector / City" required>
+                <button type="submit" class="btn-primary">Volunteer Today</button>
+            </form>
+        </div>
+    </section>
+
     <script>
-        document.getElementById('mobilize-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Hide form and show success message
-            this.style.display = 'none';
-            document.getElementById('form-success').style.display = 'block';
-        });
-        
-        // Theme Toggle Logic
-        const themeBtn = document.getElementById('themeToggle');
-        const currentTheme = localStorage.getItem('theme');
-
-        if (currentTheme === 'dark') {
-            document.documentElement.removeAttribute('data-theme');
-            themeBtn.textContent = 'MODE: OBSIDIAN';
-        } else {
-            // Default to light
-            document.documentElement.setAttribute('data-theme', 'light');
-            themeBtn.textContent = 'MODE: CONCRETE';
-        }
-
-        themeBtn.addEventListener('click', () => {
-            if (document.documentElement.getAttribute('data-theme') === 'light') {
-                document.documentElement.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'dark');
-                themeBtn.textContent = 'MODE: OBSIDIAN';
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-                themeBtn.textContent = 'MODE: CONCRETE';
-            }
-        });
-
-        // Analog Toggle Logic
-        const analogBtn = document.getElementById('analogToggle');
-        const currentAnalog = localStorage.getItem('analog');
-
-        if (currentAnalog === 'false') {
-            document.body.setAttribute('data-crt', 'false');
-            analogBtn.textContent = 'ANALOG: OFF';
-        } else {
-            // Default to true
-            document.body.setAttribute('data-crt', 'true');
-            analogBtn.textContent = 'ANALOG: ON';
-        }
-
-        analogBtn.addEventListener('click', () => {
-            const isCrt = document.body.getAttribute('data-crt') === 'true';
-            if (isCrt) {
-                document.body.setAttribute('data-crt', 'false');
-                localStorage.setItem('analog', 'false');
-                analogBtn.textContent = 'ANALOG: OFF';
-            } else {
-                document.body.setAttribute('data-crt', 'true');
-                localStorage.setItem('analog', 'true');
-                analogBtn.textContent = 'ANALOG: ON';
-            }
-        });
-
-        // Smooth scrolling for navigation links
+        // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
